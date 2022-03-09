@@ -168,7 +168,7 @@ AS
 	INNER JOIN [Orders] o ON o.EmployeeID = e.EmployeeID
 	INNER JOIN [Order Details] od ON o.OrderID = od.OrderID
 	WHERE YEAR(o.OrderDate) = '2017' AND MONTH(o.OrderDate) = '6'  -- This row is editable for time that we want, but is possible choose
-																   --these options during execute or is better create a function? And how?
+								       --these options during execute or is better create a function? And how?
 	GROUP BY CONCAT(e.FirstName, e.LastName)
 	ORDER BY SUM(od.Quantity*od.UnitPrice) DESC*/
 
